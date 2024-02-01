@@ -1,134 +1,144 @@
-# Google Dorks for Bug Bounty and Web Application Security
+### Broad domain search w/ negative search
 
-Explore this curated collection of Google Dorks to enhance your Bug Bounty, Web Application Security, and Pentesting efforts.
+> site:example.com -www -shop -share -ir -mfa
 
-## [Live Tool](https://egscan.co/)
-![Screen Shot](https://github.com/dragonked2/google/assets/66541902/50c83306-1e64-48fe-8ca2-4044daa72743)
+### PHP extension w/ parameters
 
-
-[![Follow @3lyy313 on Twitter](https://img.shields.io/twitter/url/https/twitter.com/3lyy313.svg?style=social&label=Follow%20%403lyy313)](https://twitter.com/3lyy313)
-
----
-
-### Broad Domain Search with Negative Filters
-
-> `site:egscan.co -www -shop -share -ir -mfa`
-
-### PHP Extension with Parameters
-
-> `site:egscan.co ext:php inurl:?`
+> site:example.com ext:php inurl:?
 
 ### Disclosed XSS and Open Redirects
 
-> `site:openbugbounty.org inurl:reports intext:"egscan.co"`
+> site:openbugbounty.org inurl:reports intext:"example.com"
 
 ### Juicy Extensions
 
-> `site:"egscan[.]co" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess`
+> site:"example[.]com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
 
-### XSS-Prone Parameters
+### XSS prone parameters
 
-> `inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:egscan.co`
+> inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:example.com
 
-### Open Redirect-Prone Parameters
+### Open Redirect prone parameters
 
-> `inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:egscan.co`
+> inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:example.com
 
-### SQLi-Prone Parameters
+### SQLi Prone Parameters
 
-> `inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:egscan.co`
+> inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:example.com
 
-### SSRF-Prone Parameters
+### SSRF Prone Parameters
 
-> `inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain=  | inurl:page= inurl:& site:egscan.co`
+> inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain=  | inurl:page= inurl:& site:example.com
 
-### LFI-Prone Parameters
+### LFI Prone Parameters
 
-> `inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:egscan.co`
+> inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:example.com
 
-### RCE-Prone Parameters
+### RCE Prone Parameters
 
-> `inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read=  | inurl:ping= inurl:& site:egscan.co`
+> inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read=  | inurl:ping= inurl:& site:example.com
 
-### High Percentage Inurl Keywords
+### High % inurl keywords
 
-> `inurl:config | inurl:env | inurl:setting | inurl:backup | inurl:admin | inurl:php site:egscan[.]co`
+> inurl:config | inurl:env | inurl:setting | inurl:backup | inurl:admin | inurl:php site:example[.]com
 
 ### Sensitive Parameters
 
-> `inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:egscan[.]co`
+> inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:example[.]com
 
-### API Documentation
+### API Docs
 
-> `inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:"egscan[.]co"`
+> inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:"example[.]com"
 
 ### Code Leaks
 
-> `site:pastebin.com "egscan.co"`  
-> `site:jsfiddle.net "egscan.co"`  
-> `site:codebeautify.org "egscan.co"`  
-> `site:codepen.io "egscan.co"`
+> site:pastebin.com "example.com"
+
+> site:jsfiddle.net "example.com"
+
+> site:codebeautify.org "example.com"
+
+> site:codepen.io "example.com"
 
 ### Cloud Storage
 
-> `site:s3.amazonaws.com "egscan.co"`  
-> `site:blob.core.windows.net "egscan.co"`  
-> `site:googleapis.com "egscan.co"`  
-> `site:drive.google.com "egscan.co"`  
-> `site:dev.azure.com "egscan[.]co"`  
-> `site:onedrive.live.com "egscan[.]co"`  
-> `site:digitaloceanspaces.com "egscan[.]co"`  
-> `site:sharepoint.com "egscan[.]co"`  
-> `site:s3-external-1.amazonaws.com "egscan[.]co"`  
-> `site:s3.dualstack.us-east-1.amazonaws.com "egscan[.]co"`  
-> `site:dropbox.com/s "egscan[.]co"`  
-> `site:box.com/s "egscan[.]co"`  
-> `site:docs.google.com inurl:"/d/" "egscan[.]co"`
+> site:s3.amazonaws.com "example.com"
+
+> site:blob.core.windows.net "example.com"
+
+> site:googleapis.com "example.com"
+
+> site:drive.google.com "example.com"
+
+> site:dev.azure.com "example[.]com"
+
+> site:onedrive.live.com "example[.]com"
+
+> site:digitaloceanspaces.com "example[.]com"
+
+> site:sharepoint.com "example[.]com"
+
+> site:s3-external-1.amazonaws.com "example[.]com"
+
+> site:s3.dualstack.us-east-1.amazonaws.com "example[.]com"
+
+> site:dropbox.com/s "example[.]com"
+
+> site:box.com/s "example[.]com"
+
+> site:docs.google.com inurl:"/d/" "example[.]com"
 
 ### JFrog Artifactory
 
-> `site:jfrog.io "egscan[.]co"`
+> site:jfrog.io "example[.]com"
 
 ### Firebase
 
-> `site:firebaseio.com "egscan[.]co"`
+> site:firebaseio.com "example[.]com"
 
-### File Upload Endpoints
+### File upload endpoints
 
-> `site:egscan.co "choose file"`
+> site:example.com ”choose file”
 
-## Dorks Without Domain
+## Dorks that work better w/o domain
 
-### Bug Bounty Programs and Vulnerability Disclosure Programs
+### Bug Bounty programs and Vulnerability Disclosure Programs
 
-> `"submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone"`  
-> `site:*/security.txt "bounty"`
+> "submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone"
+
+> site:*/security.txt "bounty"
 
 ### Apache Server Status Exposed
 
-> `site:*/server-status apache`
+> site:*/server-status apache
 
 ### WordPress
 
-> `inurl:/wp-admin/admin-ajax.php`
+> inurl:/wp-admin/admin-ajax.php
 
 ### Drupal
 
-> `intext:"Powered by" & intext:Drupal & inurl:user`
+> intext:"Powered by" & intext:Drupal & inurl:user
 
 ### Joomla
 
-> `site:*/joomla/login`
+> site:*/joomla/login
+
 
 ---
 
-**Medium Articles for More Dorks:**
-- [5 Google Dorks Every Hacker Needs to Know](https://thegrayarea.tech/5-google-dorks-every-hacker-needs-to-know-fed21022a906)
-- [Uncover Hidden Gems in the Cloud with Google Dorks](https://infosecwriteups.com/uncover-hidden-gems-in-the-cloud-with-google-dorks-8621e56a329d)
-- [10 Google Dorks for Sensitive Data](https://infosecwriteups.com/10-google-dorks-for-sensitive-data-9454b09edc12)
+Medium articles for more dorks:
 
-**Top Parameters:**
-- [Top 25 Parameter](https://github.com/lutfumertceylan/top25-parameter)
+https://thegrayarea.tech/5-google-dorks-every-hacker-needs-to-know-fed21022a906
 
-**Proviesec Dorks:**
-- [Proviesec Google Dorks](https://github.com/Proviesec/google-dorks)
+https://infosecwriteups.com/uncover-hidden-gems-in-the-cloud-with-google-dorks-8621e56a329d
+
+https://infosecwriteups.com/10-google-dorks-for-sensitive-data-9454b09edc12
+
+Top Parameters:
+
+https://github.com/lutfumertceylan/top25-parameter
+
+Proviesec dorks:
+
+https://github.com/Proviesec/google-dorks
