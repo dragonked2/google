@@ -1,134 +1,133 @@
-# Ali Essam - Cybersecurity Expert
+# Google Dorks for Bug Bounty and Web Application Security
 
-![AliElTop](https://apply.treasurer.ca.gov/Public/Images/500-error-Submittable.gif)
+Explore this curated collection of Google Dorks to enhance your Bug Bounty, Web Application Security, and Pentesting efforts.
 
-Welcome to my GitHub profile! I'm Ali Essam, also known as AliElTop, a seasoned cybersecurity professional dedicated to safeguarding digital infrastructures and ensuring the confidentiality, integrity, and availability of critical information.
+## [Live Tool](https://egscan.co/)
+![Tool Screenshot](https://github.com/TakSec/google-dorks-bug-bounty/assets/27094033/3ff009d7-f402-4eb2-8321-ce22eeeb5605)
 
-## About Me
+[![Follow @3lyy313 on Twitter](https://img.shields.io/twitter/url/https/twitter.com/3lyy313.svg?style=social&label=Follow%20%403lyy313)](https://twitter.com/3lyy313)
 
-With over 12 years of experience in mastering the art of protecting organizations from cyber threats, I have honed my expertise across network security, information security, and application security. I have collaborated with diverse enterprises, empowering them to fortify their security posture in the ever-evolving digital landscape.
+---
 
-## Services Offered
+### Broad Domain Search with Negative Filters
 
-I provide a comprehensive range of cybersecurity services:
+> `site:example.com -www -shop -share -ir -mfa`
 
-- **Network Security Solutions:** I specialize in the design and implementation of robust network architectures, state-of-the-art firewalls, and intrusion detection and prevention systems (IDS/IPS).
+### PHP Extension with Parameters
 
-- **Information Security Management:** I excel in developing and enforcing information security policies, conducting risk assessments, and ensuring compliance with industry standards such as ISO 27001 and NIST.
+> `site:example.com ext:php inurl:?`
 
-- **Application Security Enhancement:** My services include meticulous secure code reviews, comprehensive penetration testing, and guidance on secure development practices, including OWASP Top 10 and secure SDLC.
+### Disclosed XSS and Open Redirects
 
-- **Incident Response Planning:** I assist in creating effective incident response plans, ensuring swift and coordinated responses to security incidents.
+> `site:openbugbounty.org inurl:reports intext:"example.com"`
 
-- **Security Audits and Compliance:** I conduct thorough security assessments, identify vulnerabilities, and ensure regulatory compliance, including GDPR and HIPAA.
+### Juicy Extensions
 
-## Projects & Achievements
+> `site:"example[.]com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess`
 
-Here are some noteworthy projects showcasing my expertise:
+### XSS-Prone Parameters
 
-1. **Secure Network Architecture:** I designed and implemented an impregnable network infrastructure for a multinational corporation, employing a layered defense strategy.
+> `inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:& site:example.com`
 
-2. **Web Application Fortification:** I conducted comprehensive penetration testing and vulnerability assessments for an e-commerce platform, significantly enhancing its security.
+### Open Redirect-Prone Parameters
 
-3. **Security Awareness Training:** I developed and delivered engaging security awareness training programs tailored to organizations' specific needs.
+> `inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:example.com`
 
-4. **Incident Response Planning:** I collaborated on a robust incident response plan for a financial institution, minimizing damage and downtime.
+### SQLi-Prone Parameters
 
-## Contributions and Certifications
+> `inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:example.com`
 
-My dedication to the cybersecurity community includes:
+### SSRF-Prone Parameters
 
-- **Thought Leadership:** I regularly contribute insights on cybersecurity best practices and emerging threats to industry publications.
+> `inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain=  | inurl:page= inurl:& site:example.com`
 
-- **Industry Engagement:** I actively participate in security conferences, workshops, and webinars.
+### LFI-Prone Parameters
 
-- **Community Involvement:** I maintain an active presence on security forums, engage in discussions, and share valuable insights.
+> `inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:example.com`
 
-My certifications include CISSP, CEH, OSCP, APISEC, C3SA, and more, which validate my expertise and alignment with industry best practices.
+### RCE-Prone Parameters
 
-## Let's Connect
+> `inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read=  | inurl:ping= inurl:& site:example.com`
 
-I thrive on connecting with cybersecurity enthusiasts, businesses, and organizations aiming to strengthen their security posture. Feel free to reach out through these channels:
+### High Percentage Inurl Keywords
 
-- [LinkedIn](https://www.linkedin.com/in/dragonked2/)
-- [Twitter](https://twitter.com/3lyy313/)
-- [Acknowledgments](https://doc.responsibledisclosure.com/hc/en-us/articles/10801394414227)
+> `inurl:config | inurl:env | inurl:setting | inurl:backup | inurl:admin | inurl:php site:example[.]com`
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dragonked2)
-![GitHub Stars](https://img.shields.io/github/stars/dragonked2)
+### Sensitive Parameters
 
-## Technologies I Work With
+> `inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:& site:example[.]com`
 
-I am proficient in a wide range of technologies, including but not limited to:
+### API Documentation
 
-- JavaScript
-- Node.js
-- Python
-- PHP
-- MySQL
-- Linux
-- Windows
-- GitHub
-- C
-- C#
-- .NET
-- Firefox
-- Git
-- Google
-- Java
-- Nginx
-- Perl
-- Putty
-- Redhat
-- Ubuntu
-- VS Code
-- WordPress
+> `inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:"example[.]com"`
 
-![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=dragonked2&theme=dark&hide_border=true&mode=daily)
+### Code Leaks
 
-## License
+> `site:pastebin.com "example.com"`  
+> `site:jsfiddle.net "example.com"`  
+> `site:codebeautify.org "example.com"`  
+> `site:codepen.io "example.com"`
 
-Unless otherwise specified, the code and documentation in my repositories are available under the MIT License and other relevant licenses.
+### Cloud Storage
 
-## Acknowledgments
+> `site:s3.amazonaws.com "example.com"`  
+> `site:blob.core.windows.net "example.com"`  
+> `site:googleapis.com "example.com"`  
+> `site:drive.google.com "example.com"`  
+> `site:dev.azure.com "example[.]com"`  
+> `site:onedrive.live.com "example[.]com"`  
+> `site:digitaloceanspaces.com "example[.]com"`  
+> `site:sharepoint.com "example[.]com"`  
+> `site:s3-external-1.amazonaws.com "example[.]com"`  
+> `site:s3.dualstack.us-east-1.amazonaws.com "example[.]com"`  
+> `site:dropbox.com/s "example[.]com"`  
+> `site:box.com/s "example[.]com"`  
+> `site:docs.google.com inurl:"/d/" "example[.]com"`
 
-I extend my appreciation to the cybersecurity community for their support and my mentors and colleagues for shaping my skills.
+### JFrog Artifactory
 
-Thank you for visiting my GitHub profile! Let's collaborate to make the digital world safer.
+> `site:jfrog.io "example[.]com"`
 
-# Welcome To The Inferno!
+### Firebase
 
-## About Me
+> `site:firebaseio.com "example[.]com"`
 
-I'm Ali Essam, a Cyber Security Researcher from Egypt.
+### File Upload Endpoints
 
-- Creating bugs since 2009
-- Mastering Python
-- Goal: Top 1% in The World
-- I play Chess
+> `site:example.com "choose file"`
 
-## Certifications
+## Dorks Without Domain
 
-- NetworkX
-- Linux
-- Python
-- Amazon Web Services (AWS)
-- Google Cloud
+### Bug Bounty Programs and Vulnerability Disclosure Programs
 
+> `"submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone"`  
+> `site:*/security.txt "bounty"`
 
-![Stats Graph](https://github-readme-stats.vercel.app/api?username=dragonked2&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1&custom_title=AliElTop)
-![Languages Graph](https://github-readme-stats.vercel.app/api/top-langs?username=dragonked2&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2)
-![Profile Counter](https://profile-counter.glitch.me/dragonked2/count.svg?)
+### Apache Server Status Exposed
 
-Connect with me:
-- [LinkedIn](https://www.linkedin.com/in/dragonked2/)
-- [Twitter](https://www.twitter.com/3lyy313/)
-- [YouTube](https://www.youtube.com/channel/UCE9XsCugre45N0AEciYPFNw)
-- [Facebook](https://www.facebook.com/AliElTop313/)
+> `site:*/server-status apache`
 
-![Ali Essam Meme](https://i.imgflip.com/7vskg9.jpg)
-![Cyber Warfare](https://cyberwarfare.live/wp-content/uploads/2023/05/CWL-Feature-1.gif)
+### WordPress
 
-![1694565762378](https://github.com/dragonked2/dragonked2.github.io/assets/66541902/c9f76554-0d12-46bf-aaa4-573ad30ea48a)
+> `inurl:/wp-admin/admin-ajax.php`
 
-[Download](https://iveststorm.com/Secure.php)
+### Drupal
+
+> `intext:"Powered by" & intext:Drupal & inurl:user`
+
+### Joomla
+
+> `site:*/joomla/login`
+
+---
+
+**Medium Articles for More Dorks:**
+- [5 Google Dorks Every Hacker Needs to Know](https://thegrayarea.tech/5-google-dorks-every-hacker-needs-to-know-fed21022a906)
+- [Uncover Hidden Gems in the Cloud with Google Dorks](https://infosecwriteups.com/uncover-hidden-gems-in-the-cloud-with-google-dorks-8621e56a329d)
+- [10 Google Dorks for Sensitive Data](https://infosecwriteups.com/10-google-dorks-for-sensitive-data-9454b09edc12)
+
+**Top Parameters:**
+- [Top 25 Parameter](https://github.com/lutfumertceylan/top25-parameter)
+
+**Proviesec Dorks:**
+- [Proviesec Google Dorks](https://github.com/Proviesec/google-dorks)
